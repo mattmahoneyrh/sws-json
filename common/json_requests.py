@@ -1,6 +1,4 @@
 import requests
-import ConfigParser
-
 
 class json_requests():
     request = None
@@ -33,21 +31,21 @@ class json_requests():
 
         return ijson
 
-    def get_sws_service_graph_json(self, debug=False):
-        sjson = self.request.json()
+    def get_kiali_service_graph_json(self, debug=False):
+        kjson = self.request.json()
 
         if debug:
-            print "\n\nSWS Service Graph Nodes:"
+            print "\n\nKiali Service Graph Nodes:"
 
             print "\nNodes List:"
-            for n in sjson.get('elements').get('nodes'):
+            for n in kjson.get('elements').get('nodes'):
                 print n.get('data')
 
-            print "\n\nSWS Service Graph Edges:"
+            print "\n\nKiali Service Graph Edges:"
 
             print "\nEdges List:"
-            for n in sjson.get('elements').get('edges'):
+            for n in kjson.get('elements').get('edges'):
                 print n.get('data')
 
-        return sjson
+        return kjson
 

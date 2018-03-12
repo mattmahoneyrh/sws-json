@@ -16,11 +16,11 @@ class properties():
     def get_istio_service_graph_json_endpoint(self):
         return self.config.get('ServiceGraphJsonEndpoints', 'ServiceGraph.IstioJson');
 
-    def get_sws_service_graph_json_endpoint(self):
-        return self.config.get('ServiceGraphJsonEndpoints', 'ServiceGraph.SwsJson');
+    def get_kiali_service_graph_json_endpoint(self):
+        return self.config.get('ServiceGraphJsonEndpoints', 'ServiceGraph.KialiJson');
 
-    def get_sws_service_graph_json_auth(self):
+    def get_kiali_service_graph_json_auth(self):
         auth={}
-        auth['username'] = self.config.get('ServiceGraphJsonEndpoints', 'ServiceGraph.SWSJsonUsername')
-        auth['password'] = self.config.get('ServiceGraphJsonEndpoints', 'ServiceGraph.SWSJsonPassword')
+        auth['username'] = self.config.get('ServiceGraphJsonEndpoints', 'ServiceGraph.KialiJsonUsername')
+        auth['password'] = self.config.get('ServiceGraphJsonEndpoints', 'ServiceGraph.KialiJsonPassword')
         return auth
