@@ -94,7 +94,6 @@ class compare_service_graphs():
 
     # Remove 'Group' Nodes, because they do not exist in Istio Service Graph
     def remove_group_nodes(self, nodes=None):
-        assert nodes
 
         groups = []
         for i in range(0, len(nodes)):

@@ -13,6 +13,8 @@ class json_requests():
         else:
             self.request = requests.get(url)
 
+        assert 503 != self.request.status_code
+
     def get_istio_service_graph_json(self, debug=False):
         ijson = self.request.json()
 
